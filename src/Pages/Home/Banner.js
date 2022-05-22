@@ -18,7 +18,7 @@ const Banner = () => {
           2001-2022 GO TO SHOP
         </p>
         <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
+          <button class="btn btn-primary">Buy</button>
         </div>
       </div>
     </div>

@@ -47,15 +47,17 @@ const Navbar = () => {
           </label>
           <ul
             tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            class="menu font-bold menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {menuItems}
           </ul>
         </div>
-        <a class="btn btn-ghost normal-case text-xl">ELECTRIX tools</a>
+        <a class="btn btn-ghost normal-case text-xl font-bold">
+          ELECTRIX tools
+        </a>
       </div>
       <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal p-0">{menuItems}</ul>
+        <ul class="menu menu-horizontal font-bold p-0">{menuItems}</ul>
       </div>
       <div class="navbar-end">
         <a class="btn">Get started</a>

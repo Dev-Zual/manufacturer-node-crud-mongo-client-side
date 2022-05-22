@@ -1,25 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Tool from './Tool';
 
 const Tools = () => {
+  const [tools, setTools] = useState([]);
+  useEffect(() => {
+    fetch('data.json')
+      .then((res) => res.json())
+      .then((data) => setTools(data));
+  }, []);
   return (
-    <div className="w-11/12 mx-auto mt-9">
-      <h1 className="text-5xl font-bold mb-12 text-primary text-center">
+    <div className="w-11/12 mx-auto mt-12">
+      <h1 className="text-5xl font-bold mb-12  text-primary text-center">
         Best Tools
       </h1>
-      <div class="card card-compact w-96 bg-base-100 shadow-xl">
-        <figure>
-          <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
-            alt="Shoes"
-          />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3">
+        {tools.map((tool) => (
+          <Tool key={tool._id} tool={tool}></Tool>
+        ))}
       </div>
     </div>
   );

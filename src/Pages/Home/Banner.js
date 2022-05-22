@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
   return (
-    <div class="card min-w-screen border-r-0 bg-base-100 shadow-xl image-full">
+    <div class="card min-w-screen border-r-0 bg-base-100 shadow-xl image-full mt-6">
       <figure>
         <img
           src="https://html.modernwebtemplates.com/electrix/images/slide03.jpg"

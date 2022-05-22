@@ -1,11 +1,14 @@
-
 import './App.css';
+import Home from './Pages/Home/Home';
+import Footer from './Pages/Shared/Footer';
+import Navbar from './Pages/Shared/Navbar';
 
 function App() {
   return (
-    <div>
-   <button class="btn btn-primary">Button</button>
-      
+    <div className="w-5/6 mx-auto">
+      <Navbar></Navbar>
+      <Home></Home>
+      <Footer></Footer>
     </div>
   );
 }

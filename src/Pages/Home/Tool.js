@@ -6,12 +6,12 @@ const Tool = ({ tool }) => {
 
   const handlepurchase = () => {};
   return (
-    <div class="card card-compact w-96 bg-base-100 mt-6 shadow-xl">
+    <div className="card card-compact w-96 bg-base-100 mt-6 shadow-xl">
       <figure>
         <img src={img} alt="Shoes" />
       </figure>
-      <div class="card-body">
-        <h2 class="card-title font-bold text-slate-700">{name}</h2>
+      <div className="card-body">
+        <h2 className="card-title font-bold text-slate-700">{name}</h2>
         <p className="text-justify text-base font-semibold text-slate-500">
           {description}
         </p>
@@ -29,9 +29,12 @@ const Tool = ({ tool }) => {
             <strong className="text-primary"> {price} </strong>
           </p>
         </div>
-        <div class="card-actions justify-end">
+        <div className="card-actions justify-end">
           <Link to="/purchase">
-            <button onClick={() => handlepurchase(_id)} class="btn btn-primary">
+            <button
+              onClick={() => handlepurchase(_id)}
+              className="btn btn-primary"
+            >
               Buy Now
             </button>
           </Link>

@@ -12,6 +12,7 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import Review from './Pages/Dashboard/Review';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import RequireAuth from './Pages/Login/RequireAuth';
+import AllUsers from './Pages/Dashboard/AllUsers';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           }
         >
           <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path="allusers" element={<AllUsers></AllUsers>}></Route>
           <Route path="myprofile" element={<MyProfile></MyProfile>}></Route>
           <Route path="review" element={<Review></Review>}></Route>
         </Route>

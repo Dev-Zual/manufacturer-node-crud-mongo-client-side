@@ -9,6 +9,7 @@ const Navbar = () => {
 
   const logout = () => {
     signOut(auth);
+    localStorage.removeItem('accessToken');
   };
 
   const menuItems = (
@@ -75,6 +76,7 @@ const Navbar = () => {
           </li>
         )} */}
         <ul className="menu menu-horizontal font-bold p-0">
+          <li>{user && <Link to="/dashboard">Dashboard</Link>} </li>
           <li>{user ? <p>{user.displayName}</p> : ''}</li>
           <li>
             {user ? (
@@ -86,6 +88,26 @@ const Navbar = () => {
             )}
           </li>
         </ul>
+        <label
+          tabindex="1"
+          for="dashboard-sidebar"
+          className="btn btn-ghost lg:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            />
+          </svg>
+        </label>
       </div>
     </div>
   );

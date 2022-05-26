@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Tool = ({ tool }) => {
+const Tool = ({ tool, setPurchase }) => {
   const { name, img, description, availble_qty, min_order, price, _id } = tool;
 
-  const handlepurchase = () => {};
   return (
     <div className="card card-compact w-96 bg-base-100 mt-6 shadow-xl">
       <figure>
@@ -30,13 +29,8 @@ const Tool = ({ tool }) => {
           </p>
         </div>
         <div className="card-actions justify-end">
-          <Link to="/purchase">
-            <button
-              onClick={() => handlepurchase(_id)}
-              className="btn btn-primary"
-            >
-              Buy Now
-            </button>
+          <Link to={`/purchase/${_id}`}>
+            <button className="btn btn-primary">Buy Now</button>
           </Link>
         </div>
       </div>

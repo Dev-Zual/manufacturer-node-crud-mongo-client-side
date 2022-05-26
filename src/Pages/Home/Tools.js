@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+
 import Tool from './Tool';
 
 const Tools = () => {
   const [tools, setTools] = useState([]);
+
   useEffect(() => {
     fetch('http://localhost:5000/products')
       .then((res) => res.json())

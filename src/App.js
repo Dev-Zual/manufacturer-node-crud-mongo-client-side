@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './Pages/Login/Login';
 import Home from './Pages/Home/Home';
-import Purchase from './Pages/Purchase/Purchase';
+import Purchase from './Pages/Home/Purchase';
 
 import Navbar from './Pages/Shared/Navbar';
 import SignUp from './Pages/Shared/SignUp';
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route
-          path="purchase"
+          path="purchase/:id"
           element={
             <RequireAuth>
               <Purchase></Purchase>
